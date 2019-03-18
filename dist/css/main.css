@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-family: ivymode, sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+header {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  header h1 {
+    text-align: center; }
+
+.playing-container {
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+  .playing-container .card-wrapper {
+    padding: 10px;
+    margin: 12px;
+    width: 180px;
+    height: 240px;
+    background-color: transparent;
+    perspective: 1000px;
+    overflow: hidden; }
+    .playing-container .card-wrapper:hover .card-inner {
+      transform: rotateY(180deg); }
+    .playing-container .card-wrapper::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      left: -100%;
+      transform: skewX(-36deg);
+      width: 100px;
+      height: calc(100% - 20px);
+      transition: left .2s ease .1s; }
+    .playing-container .card-wrapper:hover::before {
+      left: 150%; }
+    .playing-container .card-wrapper .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.3s;
+      transform-style: preserve-3d; }
+      .playing-container .card-wrapper .card-inner .card-front, .playing-container .card-wrapper .card-inner .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden; }
+      .playing-container .card-wrapper .card-inner .card-front {
+        border: 12px solid;
+        border-radius: 20px; }
+        .playing-container .card-wrapper .card-inner .card-front .doggo-container {
+          margin: 4px auto 0;
+          height: 60%;
+          width: 92%;
+          text-align: center;
+          position: relative; }
+          .playing-container .card-wrapper .card-inner .card-front .doggo-container .doggo {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px; }
+            .playing-container .card-wrapper .card-inner .card-front .doggo-container .doggo img {
+              border-radius: 5px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center 30%; }
+        .playing-container .card-wrapper .card-inner .card-front .elo-container {
+          width: 92%;
+          height: 40%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .playing-container .card-wrapper .card-inner .card-front .elo-container p {
+            display: block; }
+          .playing-container .card-wrapper .card-inner .card-front .elo-container a {
+            font-family: inherit;
+            text-transform: uppercase;
+            font-size: 15px;
+            color: white;
+            width: 60%;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none; }
+      .playing-container .card-wrapper .card-inner .card-back {
+        border-radius: 20px;
+        color: white;
+        transform: rotateY(180deg); }
+    .playing-container .card-wrapper.red::before {
+      background-color: #a92834; }
+    .playing-container .card-wrapper.red .card-front {
+      background-color: #cfa3a7;
+      border-color: #a92834; }
+      .playing-container .card-wrapper.red .card-front .doggo-container {
+        border-color: #a92834; }
+      .playing-container .card-wrapper.red .card-front a {
+        background-color: #a92834; }
+    .playing-container .card-wrapper.red .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #a92834;
+      background-size: 30px; }
+    .playing-container .card-wrapper.blue::before {
+      background-color: #3c68b2; }
+    .playing-container .card-wrapper.blue .card-front {
+      background-color: #65c3ef;
+      border-color: #3c68b2; }
+      .playing-container .card-wrapper.blue .card-front .doggo-container {
+        border-color: #3c68b2; }
+      .playing-container .card-wrapper.blue .card-front a {
+        background-color: #3c68b2; }
+    .playing-container .card-wrapper.blue .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #3c68b2;
+      background-size: 30px; }
+    .playing-container .card-wrapper.green::before {
+      background-color: #14793d; }
+    .playing-container .card-wrapper.green .card-front {
+      background-color: #81c569;
+      border-color: #14793d; }
+      .playing-container .card-wrapper.green .card-front .doggo-container {
+        border-color: #14793d; }
+      .playing-container .card-wrapper.green .card-front a {
+        background-color: #14793d; }
+    .playing-container .card-wrapper.green .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #14793d;
+      background-size: 30px; }
+    .playing-container .card-wrapper.orange::before {
+      background-color: #c24b27; }
+    .playing-container .card-wrapper.orange .card-front {
+      background-color: #f09573;
+      border-color: #c24b27; }
+      .playing-container .card-wrapper.orange .card-front .doggo-container {
+        border-color: #c24b27; }
+      .playing-container .card-wrapper.orange .card-front a {
+        background-color: #c24b27; }
+    .playing-container .card-wrapper.orange .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #c24b27;
+      background-size: 30px; }
+    .playing-container .card-wrapper.pink::before {
+      background-color: #eb5695; }
+    .playing-container .card-wrapper.pink .card-front {
+      background-color: #f6afce;
+      border-color: #eb5695; }
+      .playing-container .card-wrapper.pink .card-front .doggo-container {
+        border-color: #eb5695; }
+      .playing-container .card-wrapper.pink .card-front a {
+        background-color: #eb5695; }
+    .playing-container .card-wrapper.pink .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #eb5695;
+      background-size: 30px; }
+    .playing-container .card-wrapper.purple::before {
+      background-color: #705da8; }
+    .playing-container .card-wrapper.purple .card-front {
+      background-color: #c3b0d6;
+      border-color: #705da8; }
+      .playing-container .card-wrapper.purple .card-front .doggo-container {
+        border-color: #705da8; }
+      .playing-container .card-wrapper.purple .card-front a {
+        background-color: #705da8; }
+    .playing-container .card-wrapper.purple .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #705da8;
+      background-size: 30px; }
+    .playing-container .card-wrapper.yellow::before {
+      background-color: #e7ba30; }
+    .playing-container .card-wrapper.yellow .card-front {
+      background-color: #f0e375;
+      border-color: #e7ba30; }
+      .playing-container .card-wrapper.yellow .card-front .doggo-container {
+        border-color: #e7ba30; }
+      .playing-container .card-wrapper.yellow .card-front a {
+        background-color: #e7ba30; }
+    .playing-container .card-wrapper.yellow .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #e7ba30;
+      background-size: 30px; }
+    .playing-container .card-wrapper.black::before {
+      background-color: #363635; }
+    .playing-container .card-wrapper.black .card-front {
+      background-color: #dcdcdb;
+      border-color: #363635; }
+      .playing-container .card-wrapper.black .card-front .doggo-container {
+        border-color: #363635; }
+      .playing-container .card-wrapper.black .card-front a {
+        background-color: #363635; }
+    .playing-container .card-wrapper.black .card-back {
+      background: url("https://previews.dropbox.com/p/thumb/AAUfpqJviSe08MzRNcxfIP6rTEiKnsKQkAY7_eZj8rkSBnPQFCzH4BoQnEvyMcYr_tIa_yLx4nmfkVOMNFcpVGBHJvDiT6ev6XbP_xmlVpCl-aWvVO3ZJy4VidAsZ8k--pHFDtDWttEGWG1KF2RRddOjjlZhIkxbsKrNP5kvGATPhLMiSDSNWBcMKBBly-Vd2fAQGD2ZPRez2TrqjcWbPTlZiYS83e0VCtqc_yMr34-9szExzciBxmjwygyTcqVF7S5HvaogBjL2Ct3WASHiG6Su4fflKQWrYwDk65o2z5EiAw/p.png?size_mode=5"), #363635;
+      background-size: 30px; }
+
+footer {
+  height: 15vh; }
