@@ -1,14 +1,24 @@
 {
   "name": "doggo",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss":"node-sass --watch scss/ -o dist/css/ --recursive"
+    "scss": "node-sass --watch scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timothywilkins/doggo.io-mock-up.git"
   },
   "author": "",
   "license": "MIT",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/timothywilkins/doggo.io-mock-up/issues"
+  },
+  "homepage": "https://github.com/timothywilkins/doggo.io-mock-up#readme"
 }
