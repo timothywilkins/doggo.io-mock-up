@@ -1,0 +1,21 @@
+//mixins
+@mixin cardColor($lightColor,$darkColor){
+    &::before {
+      background-color:$darkColor;
+    }
+    .card-front {
+      background-color:$lightColor;
+      border-color:$darkColor;
+      .doggo-container {
+        border-color:$darkColor;
+      }
+      a {
+        background-color:$darkColor;
+      }
+    }
+    .card-back {
+      background:$star-symbol, $darkColor;
+      background-size:30px;
+    }
+  }
+  //mixins
