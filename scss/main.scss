@@ -1,6 +1,8 @@
 @import 'config';
 @import 'colors';
 @import 'otherUI';
+@import 'buttons';
+@import 'transitions';
 
 * {
   box-sizing: border-box;
@@ -39,25 +41,25 @@ header {
     perspective: 1000px;
     overflow:hidden;
 
-    &:hover {
-      .card-inner {
-        transform: rotateY(180deg);
-      }
-    }
-    &::before {//outer card gleen transition
-      content:'';
-      z-index:1;
-      position:absolute;
-      left:-100%;
-      transform:skewX(-36deg);
-      width:100px;
-      height:calc(100% - 20px);
-      transition:left .2s ease .1s;
-    }
-    &:hover::before {
-      left:150%;
+    // &:hover {
+    //   .card-inner {
+    //     transform: rotateY(180deg);
+    //   }
+    // }
+    // &::before {//outer card gleen transition
+    //   content:'';
+    //   z-index:1;
+    //   position:absolute;
+    //   left:-100%;
+    //   transform:skewX(-36deg);
+    //   width:100px;
+    //   height:calc(100% - 20px);
+    //   transition:left .2s ease .1s;
+    // }
+    // &:hover::before {
+    //   left:150%;
 
-    }
+    // }
 
     .card-inner {
       position: relative;
@@ -66,6 +68,9 @@ header {
       text-align: center;
       transition: transform 0.3s;
       transform-style: preserve-3d;
+      // &.spin {
+      //   transform: rotateY(180deg);
+      // }
       .card-front, .card-back {
         position: absolute;
         width: 100%;
@@ -151,5 +156,8 @@ header {
   }
 }
 footer {
-  height:15vh
+  height:15vh;
+  display:flex;
+  justify-content:center;
+  align-content:center;
 }

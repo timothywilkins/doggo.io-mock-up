@@ -1,0 +1,40 @@
+button {
+    height: 50%;
+    font: bold 13px arial, helvetica, sans-serif;
+    color: white;
+    padding: 10px;
+    margin: 0 15px;
+    border-radius:20px;
+
+    &.red {
+        @include setBackgroundColor($red-dark)
+    }
+
+    &.blue {
+        @include setBackgroundColor($blue-dark)
+    }
+
+    &.green {
+        @include setBackgroundColor($green-dark)
+    }
+
+    &.orange {
+        @include setBackgroundColor($orange-dark)
+    }
+
+    &.pink {
+        @include setBackgroundColor($pink-dark)
+    }
+
+    &.purple {
+        @include setBackgroundColor($purple-dark)
+    }
+
+    &.yellow {
+        @include setBackgroundColor($yellow-dark)
+    }
+
+    &.black {
+        @include setBackgroundColor($black-dark)
+    }
+}

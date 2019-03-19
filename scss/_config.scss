@@ -18,4 +18,8 @@
       background-size:30px;
     }
   }
+
+  @mixin setBackgroundColor($color) {
+    background-color:$color;
+  }
   //mixins

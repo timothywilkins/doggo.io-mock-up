@@ -1,3 +1,30 @@
+button {
+  height: 50%;
+  font: bold 13px arial, helvetica, sans-serif;
+  color: white;
+  padding: 10px;
+  margin: 0 15px;
+  border-radius: 20px; }
+  button.red {
+    background-color: #a92834; }
+  button.blue {
+    background-color: #3c68b2; }
+  button.green {
+    background-color: #14793d; }
+  button.orange {
+    background-color: #c24b27; }
+  button.pink {
+    background-color: #eb5695; }
+  button.purple {
+    background-color: #705da8; }
+  button.yellow {
+    background-color: #e7ba30; }
+  button.black {
+    background-color: #363635; }
+
+.card-inner.spin {
+  transform: rotateY(180deg); }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,19 +57,6 @@ header {
     background-color: transparent;
     perspective: 1000px;
     overflow: hidden; }
-    .playing-container .card-wrapper:hover .card-inner {
-      transform: rotateY(180deg); }
-    .playing-container .card-wrapper::before {
-      content: '';
-      z-index: 1;
-      position: absolute;
-      left: -100%;
-      transform: skewX(-36deg);
-      width: 100px;
-      height: calc(100% - 20px);
-      transition: left .2s ease .1s; }
-    .playing-container .card-wrapper:hover::before {
-      left: 150%; }
     .playing-container .card-wrapper .card-inner {
       position: relative;
       width: 100%;
@@ -194,4 +208,7 @@ header {
       background-size: 30px; }
 
 footer {
-  height: 15vh; }
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-content: center; }

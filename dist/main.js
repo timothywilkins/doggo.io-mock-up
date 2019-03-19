@@ -1,3 +1,12 @@
-var h1 = document.querySelector('h1')
+var but1 = document.getElementById('#1');
+var cardInner = document.querySelector('.card-inner');
+var cardWrapper = document.querySelector('.card-wrapper');
 
-// h1.remove();
+but1.addEventListener('click', lol)
+
+function lol() {
+    console.log('lol')
+    cardInner.classList.toggle('spin')
+}
+
+
